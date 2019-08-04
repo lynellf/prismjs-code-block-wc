@@ -13,7 +13,7 @@ class CodeBlock extends HTMLElement {
 	constructor() {
 		super()
 		const languageAttr = this.getAttribute('language')
-		const content = this.textContent
+		const content = this.textContent ? this.trimExcessiveWhitespace(this.textContent.trim()) : ''
 		const hasContent = content!.trim().length
 		this.shadow = this.attachShadow({ mode: 'open' })
 		this.language = languageAttr ? languageAttr : 'javascript'
@@ -22,6 +22,10 @@ class CodeBlock extends HTMLElement {
 		this.componentStyle = document.createElement('style')
 		this.code = hasContent ? content : 'var error = "No code found."'
 		this.main()
+	}
+
+	trimExcessiveWhitespace = (string: string) => {
+		return string.replace(/          /g, ' ')
 	}
 
 	setLanguageClassName = (language: string) => {

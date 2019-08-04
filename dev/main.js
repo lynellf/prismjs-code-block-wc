@@ -2454,6 +2454,10 @@ class CodeBlock extends HTMLElement {
 
     _defineProperty(this, "styledCode", '');
 
+    _defineProperty(this, "trimExcessiveWhitespace", string => {
+      return string.replace(/          /g, ' ');
+    });
+
     _defineProperty(this, "setLanguageClassName", language => {
       this.languageClassName = `language-${language}`;
       return language;
@@ -2560,7 +2564,7 @@ class CodeBlock extends HTMLElement {
     });
 
     const languageAttr = this.getAttribute('language');
-    const content = this.textContent;
+    const content = this.textContent ? this.trimExcessiveWhitespace(this.textContent.trim()) : '';
     const hasContent = content.trim().length;
     this.shadow = this.attachShadow({
       mode: 'open'
