@@ -1,6 +1,6 @@
 {
 	"name": "prism-code-block-wc",
-	"version": "1.0.0",
+	"version": "1.0.1",
 	"description": "Prismjs Code Block Web Component",
 	"main": "dist/codeBlockProd.min.js",
 	"scripts": {
@@ -12,7 +12,11 @@
 	},
 	"author": "Ezell Frazier",
 	"license": "ISC",
-	"keywords": [ "prismjs", "codeblock", "webcomponent" ],
+	"keywords": [
+		"prismjs",
+		"codeblock",
+		"webcomponent"
+	],
 	"devDependencies": {
 		"@babel/core": "^7.2.2",
 		"@babel/plugin-proposal-class-properties": "^7.5.5",
