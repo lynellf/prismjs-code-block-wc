@@ -1,10 +1,17 @@
 # Prismjs Code-Block Web Component
 
 [View on NPM](https://www.npmjs.com/package/prism-code-block-wc)
+
 [View on GitHub](https://github.com/lynellf/prismjs-code-block-wc)
 
 ## What is this?
 A basic configuration of [Prismjs](https://prismjs.com/) as a web component. To keep the bundle-size modest (~40kb minified), not every language is included. Just some of my favorites, or those I'm interested in. Furthermore, only one stylesheet is included.
+
+## Who is this for?
+You want to use Prism quick and fast, with a pre-defined configuration, and not too many external dependencies within your HTML document. You plan using the same configuration across a variety of environments and frameworks.
+
+## Who is this not for?
+You want an extensive/specific level of customization. In this case, you'll want to use [Prism's Node.js package.](https://www.npmjs.com/package/prismjs)
 
 ### Languages Included
 
