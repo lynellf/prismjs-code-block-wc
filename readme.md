@@ -1,7 +1,10 @@
 # Prismjs Code-Block Web Component
 
+[View on NPM](https://www.npmjs.com/package/prism-code-block-wc)
+[View on GitHub](https://github.com/lynellf/prismjs-code-block-wc)
+
 ## What is this?
-A basic configuration of [Prismjs](https://prismjs.com/) as a web component. To keep the bundle-size modest, not every language is included. Just some of my favorites, or those I'm interested in. Furthermore, only one stylesheet is included.
+A basic configuration of [Prismjs](https://prismjs.com/) as a web component. To keep the bundle-size modest (~40kb minified), not every language is included. Just some of my favorites, or those I'm interested in. Furthermore, only one stylesheet is included.
 
 ### Languages Included
 
@@ -30,17 +33,17 @@ TypeScript React | tsx
 
 __head Element__
 ```html
-<script src="codeBlockProd.min.js" defer></script>
+<script src="https://unpkg.com/prism-code-block-wc@1.0.0/dist/codeBlockProd.min.js" defer></script>
 ```
 
 __Body Element__
 ```html
 <code-block language="JavaScript">
-    // JavaScript array and loop
-          var array = [1, 2, 3];
-          array.forEach(item =&gt; {
-          console.log(item);
-          });
+  // JavaScript array and loop
+    var array = [1, 2, 3];
+    array.forEach(item =&gt; {
+    console.log(item);
+    });
 </code-block>
 ```
 __React__
@@ -48,19 +51,19 @@ __React__
 import React from 'react'
 
 function App() {
-	const code = `
-    // JavaScript array and loop
-    var array = [1, 2, 3];
-    array.forEach(item =&gt; {
-    console.log(item);
-    });
-  `
-	return (
-		<div className="App">
-			<h1>Hello World</h1>
-			<code-block language="JavaScript">{code}</code-block>
-		</div>
-	)
+const code = `
+  // JavaScript array and loop
+  var array = [1, 2, 3];
+  array.forEach(item =&gt; {
+  console.log(item);
+  });
+`
+return (
+  <div className="App">
+    <h1>Hello World</h1>
+    <code-block language="JavaScript">{code}</code-block>
+  </div>
+)
 }
 ```
 

@@ -12,6 +12,7 @@
 	},
 	"author": "Ezell Frazier",
 	"license": "ISC",
+	"keywords": [ "prismjs", "codeblock", "webcomponent" ],
 	"devDependencies": {
 		"@babel/core": "^7.2.2",
 		"@babel/plugin-proposal-class-properties": "^7.5.5",
