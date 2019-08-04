@@ -1,6 +1,6 @@
 {
 	"name": "prism-code-block-wc",
-	"version": "1.0.1",
+	"version": "1.0.2",
 	"description": "Prismjs Code Block Web Component",
 	"main": "dist/codeBlockProd.min.js",
 	"scripts": {
